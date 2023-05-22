@@ -19,6 +19,8 @@ const client = redis.createClient({
   // password: process.env.REDIS_PASSWORD,
 });
 
+client.on('error', err => console.log('Redis Client Error', err));
+
 async function startRedis() {
   await client.connect();
 }
