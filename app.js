@@ -10,6 +10,7 @@ const signature = require('./routes/signature');
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./Schemas/index');
 const redisApp = require('./routes/redis');
+require('./helpers/connections_kafka');
 
 var app = express();
 startRedis();
